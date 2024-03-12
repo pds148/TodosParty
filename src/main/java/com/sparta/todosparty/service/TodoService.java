@@ -42,7 +42,7 @@ public class TodoService {
 
         return userTodoMap.entrySet().stream()
                 .map(entry -> new TodoListResponseDTO(entry.getKey(), entry.getValue()))
-                .collect(Collectors.toList());
+                .toList();
     }
 
     @Transactional
@@ -80,4 +80,5 @@ public class TodoService {
         }
         return todo;
     }
+
 }
